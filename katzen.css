@@ -1,0 +1,58 @@
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('images/rosapixelwelt169.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  
+  /* Mute-Button Styling */
+  #mute-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #ffc8dd;
+    border: 2px solid #ffafcc;
+    border-radius: 8px;
+    color: #333;
+    font-family: 'Comic Sans MS', 'Pixel', sans-serif;
+    font-size: 16px;
+    padding: 10px 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #ffafcc;
+    transition: all 0.2s ease;
+  }
+  
+  #mute-button:hover {
+    background-color: #ffafcc;
+    box-shadow: 0 2px 0 #ff8fa3;
+    transform: translateY(2px);
+  }
+  
+  /* Katzenbewegung */
+  .cat {
+    position: absolute;
+    bottom: -2px;
+    left: -150px;
+    width: 100px;
+    animation: walk-right 8s linear forwards, bounce 0.4s ease-in-out infinite;
+    transform: scaleX(-1); /* oder weglassen je nach Blickrichtung */
+  }
+  
+  @keyframes walk-right {
+    from { left: -150px; }
+    to { left: 110%; }
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0) scaleX(-1); }
+    50% { transform: translateY(-5px) scaleX(-1); }
+  }
+  
+  
+  
